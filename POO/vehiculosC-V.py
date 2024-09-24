@@ -1,7 +1,8 @@
 class Vehiculo:
-    def __init__(self, marca, precio):
+    def __init__(self, marca, modelo, precio):
         self.marca = marca
         self.precio = precio
+        self.modelo = modelo
         self.disponible = True
 
     def vender(self):
@@ -14,6 +15,12 @@ class Vehiculo:
     def comprar(self):
         self.disponible = True
         print(f"Vehiculo {self.marca} comprado")
+
+    def estado(self):
+        return self.disponible
+
+    def get_precio(self):
+        return self.precio    
         
 
 class Usuario:
@@ -57,8 +64,11 @@ class Tienda:
 
 
 # Datos de prueba
-vehiculo1 = Vehiculo("Toyota", 2000)
-vehiculo2 = Vehiculo("Porche", 40000)
+vehiculo1 = Vehiculo("Toyota", "Celica", 2000)
+vehiculo2 = Vehiculo("Porche", "Carrera", 40000)
+vehiculo3 = Vehiculo("Toyota", "Corolla", 20000)
+vehiculo4 = Vehiculo("Honda", "Civic", 22000)
+vehiculo5 = Vehiculo("Ford", "Mustang", 30000)
 
 usuario1 = Usuario("Pablo", 1)
 usuario2 = Usuario("Juanito", 2)
