@@ -30,6 +30,8 @@ cuenta1 = BankAccount("Ana", 500)
 cuenta2 = BankAccount("Luis", 1000)
 
 # Llamada a metodos
+
+
 cuenta1.deposit(500)
 cuenta2.withdraw(100)
 cuenta1.deactivate()
